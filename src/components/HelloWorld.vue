@@ -80,15 +80,27 @@
         </a>
       </li>
     </ul>
+    <div>
+      <button type="button" name="" @click="goto" value="goto"> goto </button>
+    </div>
   </div>
 </template>
 
-<script>
+<script>/* eslint-disable */
 export default {
   name: 'HelloWorld',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App - author by luojian'
+    }
+  },
+  created(){
+    console.log("page created ");
+  },
+  methods:{
+    goto(){
+      console.log('111');
+      this.$router.push('/ItemPage');
     }
   }
 }
