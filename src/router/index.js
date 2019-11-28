@@ -17,5 +17,6 @@ export default new Router({
       name: 'ItemPage',
       component: ItemPage
     }
-  ]
+  ],
+  mode :"history"
 })

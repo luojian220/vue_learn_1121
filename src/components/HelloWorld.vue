@@ -86,7 +86,7 @@
   </div>
 </template>
 
-<script>/* eslint-disable */
+<script>
 export default {
   name: 'HelloWorld',
   data () {
