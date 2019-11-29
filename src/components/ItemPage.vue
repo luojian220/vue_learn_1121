@@ -15,7 +15,7 @@
 
 <script>
 import componentA from "./pagetool/componentA"
-
+import axios from "axios"
 export default {
   name: 'ItemPage',
   components:{
@@ -42,9 +42,31 @@ export default {
   },
   methods:{
     goto: function () {
-      console.log('2222')
-      this.$router.push("/");
+      console.log('2222');
+      this.doRequest()
+      // this.$router.push("/");
+    },
+    doRequest () {
+
+      /*axios.get('/user?ID=12345')
+        .then(function (response) {
+          // handle success
+          console.log(response);
+        })
+        .catch(function (error) {
+          // handle error
+          console.log(error);
+        })
+        .then(function () {
+          // always executed
+        });*/
+      axios.post('/user',{name:"tom",age:"12"}).then(function (response) {
+        console.log("then:",response);
+      }).catch(function (error) {
+        console.log("error:",error);
+      });
     }
+
   }
 }
 </script>
