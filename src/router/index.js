@@ -5,18 +5,20 @@ import ItemPage from '@/components/ItemPage'
 
 Vue.use(Router)
 
+const routesConst = [
+  {
+    path: '/',
+    //name: 'HelloWorld',
+    component: HelloWorld
+  },
+  {
+    path: '/itemPage',
+    //name: 'ItemPage',
+    component: ItemPage
+  }
+]
+
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    },
-    {
-      path: '/itemPage',
-      name: 'ItemPage',
-      component: ItemPage
-    }
-  ],
+  routes: routesConst,
   mode :"history"
 })
